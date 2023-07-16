@@ -30,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: const Color.fromRGBO(24, 21, 30, 1),
       child: Form(
         key: _formkey,
         child: Column(
@@ -38,9 +38,20 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               "Welcome User",
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Colors.white),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Image.asset(
+              'asset/images/login.jpg', // Replace with the path to your image
+              height: 200,
+              width: 200,
             ),
             const SizedBox(
               height: 20,
@@ -52,11 +63,19 @@ class _LoginPageState extends State<LoginPage> {
                   TextFormField(
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      icon: const Icon(Icons.person_2_rounded),
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: const BorderSide(color: Colors.white),
+                      ),
+                      icon: const Icon(Icons.person_2_rounded,
+                          color: Color.fromRGBO(214, 116, 131, 1)),
                       hintText: "Enter Username",
                       labelText: "Username",
+                      labelStyle: const TextStyle(
+                          color: Color.fromARGB(255, 172, 172, 172)),
+                      hintStyle: const TextStyle(
+                          color: Color.fromARGB(255, 172, 172, 172)),
                     ),
+                    style: const TextStyle(color: Colors.white),
                     validator: (String? value) {
                       if (value != null && value.isEmpty) {
                         return "UserName Cannot be Empty";
@@ -68,17 +87,25 @@ class _LoginPageState extends State<LoginPage> {
                       setState(() {});
                     },
                   ),
-                  (SizedBox(
+                  const SizedBox(
                     height: 10,
-                  )),
+                  ),
                   TextFormField(
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      icon: const Icon(Icons.email),
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: const BorderSide(color: Colors.white),
+                      ),
+                      icon: const Icon(Icons.email,
+                          color: Color.fromRGBO(214, 116, 131, 1)),
                       hintText: "Enter E-mail",
                       labelText: "E-mail id",
+                      labelStyle: const TextStyle(
+                          color: Color.fromARGB(255, 172, 172, 172)),
+                      hintStyle: const TextStyle(
+                          color: Color.fromARGB(255, 172, 172, 172)),
                     ),
+                    style: const TextStyle(color: Colors.white),
                     validator: (String? value) {
                       if (value != null && value.isEmpty) {
                         return "E-mail id cannot be empty";
@@ -86,18 +113,25 @@ class _LoginPageState extends State<LoginPage> {
                       return null;
                     },
                   ),
-                  (SizedBox(
+                  const SizedBox(
                     height: 10,
-                  )),
+                  ),
                   TextFormField(
-                    obscureText: true,
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      icon: const Icon(Icons.lock),
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: const BorderSide(color: Colors.white),
+                      ),
+                      icon: const Icon(Icons.lock,
+                          color: Color.fromRGBO(214, 116, 131, 1)),
                       hintText: "Enter Password",
                       labelText: "Password",
+                      labelStyle: const TextStyle(
+                          color: Color.fromARGB(255, 172, 172, 172)),
+                      hintStyle: const TextStyle(
+                          color: Color.fromARGB(255, 172, 172, 172)),
                     ),
+                    style: const TextStyle(color: Colors.white),
                     validator: (String? value) {
                       if (value != null && value.isEmpty) {
                         return "Password Cannot be Empty";
@@ -119,7 +153,9 @@ class _LoginPageState extends State<LoginPage> {
                 height: 50,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: changeButton ? Colors.green : Colors.amber,
+                  color: changeButton
+                      ? Colors.green
+                      : const Color.fromRGBO(214, 116, 131, 1),
                   shape: changeButton ? BoxShape.circle : BoxShape.rectangle,
                   borderRadius: changeButton ? null : BorderRadius.circular(8),
                 ),
