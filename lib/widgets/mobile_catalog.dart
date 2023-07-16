@@ -20,17 +20,17 @@ class MbModel {
     Mb_Item(
         id: "04",
         name: "realme narzo 50i Prime ",
-        price: "12",
+        price: "560",
         image: "https://m.media-amazon.com/images/I/81WPIz1l5wL._SX679_.jpg"),
     Mb_Item(
         id: "05",
         name: "realme narzo N55",
-        price: "13",
+        price: "349",
         image: "https://m.media-amazon.com/images/I/81ogvU1j6qL._SX679_.jpg"),
     Mb_Item(
         id: "06",
         name: "Redmi 12C",
-        price: "21",
+        price: "659",
         image: "https://m.media-amazon.com/images/I/81itQPVn-GL._SX679_.jpg"),
   ];
 }
